@@ -1,0 +1,285 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(181, 180, 180);
+    padding: 0;
+}
+.header{
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    height: 40px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid rgb(0, 88, 250);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header h2{
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.header i{
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    top:0;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    text-decoration: none;
+    z-index: -1;
+}
+.side-bar a{
+    text-decoration: none;
+    padding: 8px;
+    color: black;
+}
+.header button:hover .side-bar{
+    z-index: 1;
+
+}
+.container{
+    padding: 0;
+    background-color: rgb(181, 180, 180);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    margin: 20px;
+    padding: 0px 0px 12px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 550px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 20px;
+    box-shadow: 1px 8px 20px ;
+    position: relative;
+}
+.box p{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    margin: 6px 6px 6px 25px;
+}
+
+h2,h3{
+    text-decoration:underline;
+    text-underline-offset: 2.5px;
+    text-transform: capitalize;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
+h3{
+    background-color: rgb(251, 255, 181);
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 0px;
+    margin-bottom: 15px;
+    left: 0;
+    border-radius: 20px 0px 20px 0px;
+    border-bottom: 7px solid rgb(0, 88, 250);
+}
+h4{
+    margin-left: 15px;
+}
+button{
+    color:black;
+    background-color: orange;
+    border: 1px;
+    border-radius: 5px;
+    padding: 6px;
+    text-align: center;
+}
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+input{
+    padding: 5px;
+    background-color:rgb(255, 247, 237);
+    border:1px solid;
+    border-radius: 5px;
+    width: 175px;;
+    height: 22px;
+    margin-left: 8px;
+    text-align:justify;
+}
+label{
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: start;
+    text-align: center;
+    width:420px;
+}
+.box div{
+    padding: 5px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    text-align: center;
+    width: 410px;
+    margin: 0px;
+}
+input::placeholder{
+    text-align:start;
+    font-size: small
+}
+
+#addSubject{
+    padding: 5px;
+    width: 50px;
+}
+
+.table-box {
+    width: 520px;
+    height: 60px;
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 0px;
+    position: relative;
+}
+
+#markSheetTable {
+    border: none;
+    background-color: rgb(255, 247, 237);
+    position: absolute;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 90%;
+    top: 0;
+}
+
+table th,
+td {
+    font-size: 16px;
+    padding: 5px;
+}
+#cgpa{
+    width:100px;
+}
+
+span{
+    padding: 5px;
+    margin-top: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.sidenav {
+    height: 100vh;
+    position:fixed;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #ffffffed;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #000000;
+    background-color: orange;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    right: 15px;
+    padding-left: 7px;
+  }
+
+
+  @media screen and (max-width: 450px) {
+    *{
+        font-size: 12px;
+    }
+    body{
+        width: auto;
+    }
+    .header{
+        width:100%;
+        position: sticky;
+        top: 0;
+    }
+    .header h2{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .header span{
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+    .container{
+        width: auto;
+        right: 0;
+    }
+    .box{
+        width: 100%;
+    }
+    h2{
+        font-size: 14px;
+    }
+    input, label,
+    .box div {
+        width: 100%; 
+    }
+    label{
+        padding: 8px;
+        border: 1px  black;
+        border-style:dashed;
+    }
+    #markSheetTable {
+        width:100%;
+        margin: 0px;
+    }
+    .table-box{
+        width: 100%;
+    }
+    #markSheetTable th{
+        font-size: 10px;
+    }
+    .sidenav{
+        width: 45%;
+    }
+}
+  
+  
