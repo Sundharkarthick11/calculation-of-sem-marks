@@ -52,9 +52,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_22FB8E990DF348CBA69845FCA5F2DC3D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_540AB0367E384A019AB16434C085FA02 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_40C5F11C88994389879443CBFF2868F3 }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,5 +60,4 @@ jobs:
         with:
           app-name: 'markcalcu'
           slot-name: 'Production'
-          package: .
-          
+          package: ${{ github.workspace }}/.net-app
